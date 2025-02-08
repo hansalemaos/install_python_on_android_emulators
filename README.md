@@ -96,6 +96,7 @@ nox_adb.exe -s 127.0.0.1:62025 push "%USERPROFILE%\Downloads\make.writeable.zip"
 
 ```sh
 nox_adb.exe -s 127.0.0.1:62025
+su
 python
 ```
 ***
@@ -130,7 +131,7 @@ BlueStacksFullInstaller_5.21.650.1063_amd64_native.exe --defaultImageName Rvc64 
 
 #### 2. Start the main instance and close it
 
-#### 3. Create ONE NEW instance of the same version
+#### 3. Create ONE NEW instance of the same version, start it and close it 
 
 #### 4. Install the Python lib [bluestacks5newinstances](https://github.com/hansalemaos/bluestacks5newinstances)
 
@@ -292,12 +293,191 @@ adb.exe -s 127.0.0.1:5565 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdc
 ### 17. Run Python
 
 ```sh
-nox_adb.exe -s 127.0.0.1:5565
+adb.exe -s 127.0.0.1:5565
+su
 python
 ```
 ***
 ***
 
+
+## LDPlayer
+
+[![Video 1](https://img.youtube.com/vi/_mgQo6OVxYg/0.jpg)](https://www.youtube.com/watch?v=_mgQo6OVxYg)
+
+
+### [Download BlueStacks5 offline installer](https://support.bluestacks.com/hc/en-us/articles/4402611273485-BlueStacks-5-offline-installer)
+
+### [Download Kitsune](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/magisk_kitsune.apk)
+
+### [Download Termux](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-app_v0.118.1+github-debug_x86_64.apk)
+
+### [Download Termux Boot - optional](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-boot-app_v0.8.1+github.debug.apk)
+
+### [Download the Magisk module termuxtoadb](https://github.com/hansalemaos/termuxtoadb/raw/refs/heads/main/termuxtoadb.zip)
+
+### [Download the Magisk module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
+
+
+#### 1. Install LDPlayer version 9 and [VirtualBox](https://www.virtualbox.org/)
+
+I recommend the  [offline installer](https://www.ldplayer.net/other/version-history-and-release-notes.html)
+Configure each LDPlayer instance as root, local adb connection, writeable system disk
+
+#### 2. Start the main instance and close it
+
+#### 3. Create ONE NEW instance of the same version, start it and close it 
+
+#### 4. Install the Python lib [ldplayer9newinstances](https://github.com/hansalemaos/ldplayer9newinstances)
+
+```py
+
+from ldplayer9newinstances import create_independent_instance
+import random
+
+basic_configuration = {
+    "propertySettings.phoneIMEI": "351542017956834",
+    "propertySettings.phoneIMSI": "460003931985310",
+    "propertySettings.phoneSimSerial": "89861050793589253274",
+    "propertySettings.phoneAndroidId": "5da5e11ca1b514d6",
+    "propertySettings.phoneModel": "ASUS_Z01QD",
+    "propertySettings.phoneManufacturer": "asus",
+    "propertySettings.macAddress": (
+        "%02x%02x%02x%02x%02x%02x" % tuple(random.randint(0, 255) for v in range(6))
+    ).upper(),
+    "statusSettings.playerName": "",
+    "basicSettings.verticalSync": False,
+    "basicSettings.fsAutoSize": 1,
+    "basicSettings.autoRun": False,
+    "basicSettings.rootMode": True,
+    "statusSettings.closeOption": 0,
+    "basicSettings.heightFrameRate": False,
+    "basicSettings.adbDebug": 1,
+    "advancedSettings.resolution": {"width": 1280, "height": 720},
+    "advancedSettings.resolutionDpi": 240,
+    "advancedSettings.cpuCount": 4,
+    "advancedSettings.memorySize": 4096,
+    "propertySettings.phoneNumber": "",
+    "basicSettings.autoRotate": False,
+    "basicSettings.isForceLandscape": False,
+    "basicSettings.standaloneSysVmdk": True,
+    "basicSettings.lockWindow": False,
+    "advancedSettings.micphoneName": "",
+    "advancedSettings.speakerName": "",
+    "networkSettings.networkEnable": True,
+    "networkSettings.networkSwitching": False,
+    "networkSettings.networkStatic": False,
+    "networkSettings.networkAddress": "0.0.0.0",
+    "networkSettings.networkGateway": "0.0.0.0",
+    "networkSettings.networkSubnetMask": "255.255.255.0",
+    "networkSettings.networkDNS1": "8.8.8.8",
+    "networkSettings.networkDNS2": "8.8.4.4",
+    "networkSettings.networkInterface": "",
+    "basicSettings.disableMouseFastOpt": True,
+    "basicSettings.cjztdisableMouseFastOpt_new": 0,
+    "basicSettings.HDRQuality": 0,
+    "basicSettings.qjcjdisableMouseFast": 1,
+    "basicSettings.fps": 60,
+    "basicSettings.astc": True,
+    "hotkeySettings.backKey": {"modifiers": 0, "key": 27},
+    "hotkeySettings.homeKey": {"modifiers": 0, "key": 112},
+    "hotkeySettings.appSwitchKey": {"modifiers": 0, "key": 113},
+    "hotkeySettings.menuKey": {"modifiers": 0, "key": 114},
+    "hotkeySettings.zoomInKey": {"modifiers": 0, "key": 115},
+    "hotkeySettings.zoomOutKey": {"modifiers": 0, "key": 116},
+    "hotkeySettings.bossKey": {"modifiers": 2, "key": 81},
+    "hotkeySettings.shakeKey": {"modifiers": 0, "key": 120},
+    "hotkeySettings.operationRecordKey": {"modifiers": 0, "key": 121},
+    "hotkeySettings.operationRecordPauseKey": {"modifiers": 0, "key": 0},
+    "hotkeySettings.operationRecordShowFrame": {"modifiers": 2, "key": 56},
+    "hotkeySettings.fullScreenKey": {"modifiers": 0, "key": 122},
+    "hotkeySettings.showMappingKey": {"modifiers": 0, "key": 123},
+    "hotkeySettings.videoRecordKey": {"modifiers": 0, "key": 119},
+    "hotkeySettings.mappingRecordKey": {"modifiers": 0, "key": 117},
+    "hotkeySettings.keyboardModelKey": {"modifiers": 2, "key": 70},
+}
+newfolder = create_independent_instance(
+    basic_config=basic_configuration,
+    vboxmanage_path=r"C:\Program Files\Oracle\VirtualBox\VBoxManage.exe",
+    ldplayer_folder=r"C:\LDPlayer",
+)
+print(newfolder)
+```
+
+#### 5. Open an ADB shell and find all su executables
+
+```sh
+# address might vary
+adb.exe -s emulator-5558 shell
+
+# find all sus (disable windows file sharing before)
+find / 2>/dev/null | grep "/su$" | awk '{print "rm -f "$0}'
+
+# output should look like (don't execute the commands yet!):
+# rm -f /system/bin/su
+# rm -f /system/xbin/su
+
+```
+
+### 6. Install [Magisk Kitsune](https://github.com/1q23lyc45/KitsuneMagisk) - Direct install (modify /system directly)
+
+```sh
+adb.exe -s emulator-5558 install -g -t "%USERPROFILE%\Downloads\magisk_kitsune.apk"
+```
+
+### 7. Copy and paste the code from the [remount script](https://github.com/hansalemaos/install_python_on_android_emulators/blob/main/termux_remountscript.sh) and delete the sus that you found before
+
+```sh
+
+rm -f /system/bin/su
+rm -f /system/xbin/su
+
+```
+
+### 8. Reboot
+
+### 9. Install [Termux](https://github.com/termux/termux-app)
+
+```sh
+adb.exe -s emulator-5558 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
+```
+
+### 10. Open and close Termux
+
+### 11. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
+
+```sh
+adb.exe -s emulator-5558 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
+```
+
+### 12. Open and close Termux boot (optional)
+
+### 13. Open Termux and write in your adb shell:
+
+```sh
+input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
+```
+
+### 14. Push the magisk modules to the sdcard
+
+```sh
+adb.exe -s emulator-5558 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
+adb.exe -s emulator-5558 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
+
+```
+### 15. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
+
+### 16. Reboot
+
+### 17. Run Python
+
+```sh
+adb.exe -s emulator-5558
+su
+python
+```
+***
+***
 
 
 
