@@ -41,7 +41,7 @@ find / 2>/dev/null | grep "/su$" | awk '{print "rm -f "$0}'
 # rm -f /system/xbin/su
 ```
 
-### 3. Install Kitsune
+### 3. Install [Magisk Kitsune](https://github.com/1q23lyc45/KitsuneMagisk)
 
 ```sh
 nox_adb.exe -s 127.0.0.1:62025 install -g -t "%USERPROFILE%\Downloads\magisk_kitsune.apk"
@@ -58,7 +58,7 @@ rm -f /system/xbin/su
 
 ### 5. Reboot
 
-### 6. Install Termux
+### 6. Install [Termux](https://github.com/termux/termux-app)
 
 ```sh
 nox_adb.exe -s 127.0.0.1:62025 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
@@ -66,7 +66,7 @@ nox_adb.exe -s 127.0.0.1:62025 install -g -t "%USERPROFILE%\Downloads\termux-app
 
 ### 7. Open and close Termux
 
-### 8. Install Termux boot (optional)
+### 8. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
 
 ```sh
 nox_adb.exe -s 127.0.0.1:62025 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
@@ -80,14 +80,14 @@ nox_adb.exe -s 127.0.0.1:62025 install -g -t "%USERPROFILE%\Downloads\termux-boo
 input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
 ```
 
-### 11. Push the magisk module to the sdcard
+### 11. Push the magisk modules to the sdcard
 
 ```sh
 nox_adb.exe -s 127.0.0.1:62025 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
 nox_adb.exe -s 127.0.0.1:62025 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
 
 ```
-### 12. Install the modules
+### 12. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
 
 ### 13. Reboot
 
