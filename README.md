@@ -123,9 +123,6 @@ python
 
 There are [instructions on the BlueStacks](https://support.bluestacks.com/hc/en-us/articles/4402611273485-BlueStacks-5-offline-installer) page to avoid crappy Nougat, e.g.
 
-```sh
-BlueStacksFullInstaller_5.21.650.1063_amd64_native.exe --defaultImageName Pie64 --imageToLaunch Pie64
-```
 
 ```sh
 BlueStacksFullInstaller_5.21.650.1063_amd64_native.exe --defaultImageName Rvc64 --imageToLaunch Rvc64
