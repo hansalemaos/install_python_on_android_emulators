@@ -36,10 +36,9 @@ nox_adb.exe -s 127.0.0.1:62025 shell
 # find all sus
 find / 2>/dev/null | grep "/su$" | awk '{print "rm -f "$0}'
 
-# output should look like:
-
-rm -f /system/bin/su
-rm -f /system/xbin/su
+# output should look like (don't execute the commands yet!):
+# rm -f /system/bin/su
+# rm -f /system/xbin/su
 ```
 
 ### 3. Install Kitsune
@@ -98,8 +97,8 @@ nox_adb.exe -s 127.0.0.1:62025 push "%USERPROFILE%\Downloads\make.writeable.zip"
 nox_adb.exe -s 127.0.0.1:62025
 python
 ```
-*** 
-*** 
+***
+***
 
 
 
