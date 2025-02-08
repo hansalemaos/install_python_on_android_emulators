@@ -4,6 +4,9 @@ Tutorials - how to install Python with root access on Android emulators
 
 ## Nox Player
 
+[![Video 1](https://img.youtube.com/vi/99mOZ3nhG8I/0.jpg)](https://www.youtube.com/watch?v=99mOZ3nhG8I)
+
+
 ### [Download Nox Player](https://support.bignox.com/en/win-release)
 
 ### [Download Kitsune](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/magisk_kitsune.apk)
@@ -95,7 +98,8 @@ nox_adb.exe -s 127.0.0.1:62025 push "%USERPROFILE%\Downloads\make.writeable.zip"
 nox_adb.exe -s 127.0.0.1:62025
 python
 ```
-
+*** 
+*** 
 
 
 
