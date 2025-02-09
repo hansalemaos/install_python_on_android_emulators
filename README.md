@@ -104,7 +104,14 @@ python
 
 ## BlueStacks5
 
+Portuguese Video
+
 [![Video 1](https://img.youtube.com/vi/tAFduUpmxnA/0.jpg)](https://www.youtube.com/watch?v=tAFduUpmxnA)
+
+English Video
+
+[![Video 1](https://img.youtube.com/vi/7LDgi3qS_lU/0.jpg)](https://www.youtube.com/watch?v=7LDgi3qS_lU)
+
 
 
 ### [Download BlueStacks5 offline installer](https://support.bluestacks.com/hc/en-us/articles/4402611273485-BlueStacks-5-offline-installer)
