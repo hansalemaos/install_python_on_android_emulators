@@ -614,7 +614,7 @@ python
 
 ## MuMuPlayer
 
-[![Video 1](https://img.youtube.com/vi/OPB7qnj70e4/0.jpg)](https://www.youtube.com/watch?v=OPB7qnj70e4)
+[![Video 1](https://img.youtube.com/vi/XBH4YEZZEXI/0.jpg)](https://www.youtube.com/watch?v=XBH4YEZZEXI)
 
 
 ### [Download MuMuPlayer](https://www.mumuplayer.com/)
