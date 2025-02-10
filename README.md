@@ -138,7 +138,7 @@ BlueStacksFullInstaller_5.21.650.1063_amd64_native.exe --defaultImageName Rvc64 
 
 #### 2. Start the main instance and close it
 
-#### 3. Create ONE NEW instance of the same version, start it and close it 
+#### 3. Create ONE NEW instance of the same version, start it and close it
 
 #### 4. Install the Python lib [bluestacks5newinstances](https://github.com/hansalemaos/bluestacks5newinstances)
 
@@ -333,7 +333,7 @@ Configure each LDPlayer instance as root, local adb connection, writeable system
 
 #### 2. Start the main instance and close it
 
-#### 3. Create ONE NEW instance of the same version, start it and close it 
+#### 3. Create ONE NEW instance of the same version, start it and close it
 
 #### 4. Install the Python lib [ldplayer9newinstances](https://github.com/hansalemaos/ldplayer9newinstances)
 
@@ -502,7 +502,7 @@ python
 
 
 
-### 1. Install [Magisk](https://www.genymotion.com/product-desktop/download/) 
+### 1. Install [Magisk](https://www.genymotion.com/product-desktop/download/)
 
 ### 2. Install [Termux](https://github.com/termux/termux-app)
 
@@ -546,6 +546,64 @@ python
 ```
 ***
 ***
+
+
+## MeMuPlay
+
+[![Video 1](https://img.youtube.com/vi/PSlqAlaRoGc/0.jpg)](https://www.youtube.com/watch?v=PSlqAlaRoGc)
+
+
+### [Download MeMuPlay](https://www.memuplay.com/pt/download-memu-on-pc.html?from=offline_installer_web)
+
+### [Download Termux](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-app_v0.118.1+github-debug_x86_64.apk)
+
+### [Download Termux Boot - optional](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-boot-app_v0.8.1+github.debug.apk)
+
+### [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+
+### [Download Kali Linux](https://www.kali.org/get-kali/#kali-virtual-machines)
+
+### 1. Install MeMuPlay, and activate root, close the emulator
+
+### 2. Install VirtualBox and the Kali Linux Image
+
+### 3. Add the MeMuPlay discs as HDD in your Kali System
+
+### 4. Get the SElinux config using `ls -lZ /system/etc/mkshrc`
+
+### 5. Open `/system/etc/mkshrc` as root and add the following line:
+```sh
+export PATH="$PATH:/data/data/com.termux/files/usr/bin"
+```
+### 6. Change the SElinux context to what it was before: `chcon CONTEXTTHATYOUFOUND /system/etc/mkshrc`
+
+### 7. Shut down the system GRACEFULLY!!!!
+
+### 8. [Remove MeMu adds](https://github.com/hansalemaos/memuplayer_without_ads)
+Don't install the newest version of ProjectivyLauncher! It doesn't work correctly! Install [this one](https://github.com/hansalemaos/memuplayer_without_ads/raw/refs/heads/main/ProjectivyLauncher-4.54-c70-xda-release.apk)
+
+### 9. Install [Termux](https://github.com/termux/termux-app)
+
+```sh
+adb.exe -s 127.0.0.1:21503 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
+```
+### 10. Open and close Termux
+
+### 11. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
+
+```sh
+adb.exe -s 127.0.0.1:21503 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
+```
+
+### 12. Open and close Termux boot (optional)
+
+### 13. Open Termux and write in your adb shell:
+
+```sh
+input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
+```
+
+
 
 
 
