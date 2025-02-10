@@ -602,6 +602,15 @@ adb.exe -s 127.0.0.1:21503 install -g -t "%USERPROFILE%\Downloads\termux-boot-ap
 ```sh
 input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
 ```
+### 10. Run Python
+
+```sh
+adb.exe -s 127.0.0.1:21503
+su
+python
+```
+***
+***
 
 
 
