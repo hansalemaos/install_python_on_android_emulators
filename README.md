@@ -490,7 +490,7 @@ python
 [![Video 1](https://img.youtube.com/vi/OPB7qnj70e4/0.jpg)](https://www.youtube.com/watch?v=OPB7qnj70e4)
 
 
-### [Download Nox Player](https://support.bignox.com/en/win-release)
+### [Download Genymotion](https://support.bignox.com/en/win-release)
 
 ### [Download Kitsune](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/magisk_kitsune.apk)
 
