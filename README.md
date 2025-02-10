@@ -550,7 +550,7 @@ python
 
 ## MeMuPlay
 
-[![Video 1](https://img.youtube.com/vi/OPB7qnj70e4/0.jpg)](https://www.youtube.com/watch?v=OPB7qnj70e4)
+[![Video 1](https://img.youtube.com/vi/GvkM1oBJR4M/0.jpg)](https://www.youtube.com/watch?v=GvkM1oBJR4M)
 
 
 ### [Download MeMuPlay](https://www.memuplay.com/pt/download-memu-on-pc.html?from=offline_installer_web)
