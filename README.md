@@ -485,7 +485,69 @@ python
 ```
 ***
 ***
+## Genymotion
 
+[![Video 1](https://img.youtube.com/vi/OPB7qnj70e4/0.jpg)](https://www.youtube.com/watch?v=OPB7qnj70e4)
+
+
+### [Download Nox Player](https://support.bignox.com/en/win-release)
+
+### [Download Kitsune](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/magisk_kitsune.apk)
+
+### [Download Termux](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-app_v0.118.1+github-debug_x86_64.apk)
+
+### [Download Termux Boot - optional](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-boot-app_v0.8.1+github.debug.apk)
+
+### [Download the Magisk module termuxtoadb](https://github.com/hansalemaos/termuxtoadb/raw/refs/heads/main/termuxtoadb.zip)
+
+### [Download the Magisk module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
+
+
+
+### 1. Install [Magisk](https://www.genymotion.com/product-desktop/download/) 
+
+### 2. Install [Termux](https://github.com/termux/termux-app)
+
+```sh
+adb.exe -s 192.168.154.116:5555 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
+```
+
+### 3. Open and close Termux
+
+### 4. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
+
+```sh
+adb.exe -s 192.168.154.116:5555 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
+```
+
+### 5. Open and close Termux boot (optional)
+
+### 6. Open Termux and write in your adb shell:
+
+```sh
+input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
+```
+
+### 7. Push the magisk modules to the sdcard
+
+```sh
+adb.exe -s 192.168.154.116:5555 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
+adb.exe -s 192.168.154.116:5555 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
+
+```
+### 8. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
+
+### 9. Reboot
+
+### 10. Run Python
+
+```sh
+adb.exe -s 192.168.154.116:5555
+su
+python
+```
+***
+***
 
 
 
