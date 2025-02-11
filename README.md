@@ -727,7 +727,7 @@ python
 
 
 
-#### 1. Install BlissOS on VMWARE, get the ip of the machine by opening Termux and writing "ifconfig"
+#### 1. Install BlissOS on VMWARE, get the ip of the machine by opening Termux and writing `ifconfig`
 
 #### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
 
