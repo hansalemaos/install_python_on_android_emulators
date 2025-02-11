@@ -602,7 +602,7 @@ adb.exe -s 127.0.0.1:21503 install -g -t "%USERPROFILE%\Downloads\termux-boot-ap
 ```sh
 input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
 ```
-### 10. Run Python
+### 14. Run Python
 
 ```sh
 adb.exe -s 127.0.0.1:21503
@@ -747,24 +747,24 @@ adb.exe -s 192.168.115.136:5555 install -g -t "%USERPROFILE%\Downloads\termux-bo
 
 ### 6. Open and close Termux boot (optional)
 
-### 10. Open Termux and write in your adb shell:
+### 7. Open Termux and write in your adb shell:
 
 ```sh
 input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
 ```
 
-### 11. Push the magisk modules to the sdcard
+### 8. Push the magisk modules to the sdcard
 
 ```sh
 adb.exe -s 192.168.115.136:5555 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
 adb.exe -s 192.168.115.136:5555 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
 
 ```
-### 12. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
+### 9. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
 
-### 13. Reboot
+### 10. Reboot
 
-### 14. Run Python
+### 11. Run Python
 
 ```sh
 adb.exe -s 192.168.115.136:5555
@@ -791,7 +791,7 @@ python
 
 ### [Download the Magisk/KernelSU module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
 
-### 0. Install BlissOS on VMWARE, start the machine in debug mode and do this:
+### 1. Install BlissOS on VMWARE, start the machine in debug mode and do this:
 
 **Change to the grub folder:**
 
@@ -805,44 +805,44 @@ python
 
 **For now, this is necessary, [it might be changed in a future release of BlissOs](https://github.com/tiann/KernelSU/issues/2113)**
 
-### 1. get the ip of the machine by opening Termux and writing `ifconfig`
+### 2. get the ip of the machine by opening Termux and writing `ifconfig`
 
-### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
+### 3. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
 
-### 3. Install [Termux](https://github.com/termux/termux-app)
+### 4. Install [Termux](https://github.com/termux/termux-app)
 
 ```sh
 adb.exe -s 192.168.115.136:5555 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
 ```
 
-### 4. Open and close Termux
+### 5. Open and close Termux
 
-### 5. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
+### 6. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
 
 ```sh
 adb.exe -s 192.168.115.136:5555 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
 ```
 
-### 6. Open and close Termux boot (optional)
+### 7. Open and close Termux boot (optional)
 
-### 10. Open Termux and write in your adb shell:
+### 8. Open Termux and write in your adb shell:
 
 ```sh
 input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
 ```
 
-### 11. Push the magisk modules to the sdcard
+### 9. Push the magisk modules to the sdcard
 
 ```sh
 adb.exe -s 192.168.115.136:5555 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
 adb.exe -s 192.168.115.136:5555 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
 
 ```
-### 12. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
+### 10. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
 
-### 13. Reboot
+### 11. Reboot
 
-### 14. Run Python
+### 12. Run Python
 
 ```sh
 adb.exe -s 192.168.115.136:5555
