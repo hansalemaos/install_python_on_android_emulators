@@ -21,9 +21,9 @@ Tutorials - how to install Python with root access on Android emulators
 
 
 
-#### 1. Enable Root on your emulator
+### 1. Enable Root on your emulator
 
-#### 2. Find all su executables
+### 2. Find all su executables
 
 ```sh
 cd "C:\Program Files (x86)\Nox\bin"
@@ -127,7 +127,7 @@ English Video
 ### [Download the Magisk module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
 
 
-#### 1. Install BlueStacks 10 or 11
+### 1. Install BlueStacks 10 or 11
 
 There are [instructions on the BlueStacks](https://support.bluestacks.com/hc/en-us/articles/4402611273485-BlueStacks-5-offline-installer) page to avoid crappy Nougat, e.g.
 
@@ -136,11 +136,11 @@ There are [instructions on the BlueStacks](https://support.bluestacks.com/hc/en-
 BlueStacksFullInstaller_5.21.650.1063_amd64_native.exe --defaultImageName Rvc64 --imageToLaunch Rvc64
 ```
 
-#### 2. Start the main instance and close it
+### 2. Start the main instance and close it
 
-#### 3. Create ONE NEW instance of the same version, start it and close it
+### 3. Create ONE NEW instance of the same version, start it and close it
 
-#### 4. Install the Python lib [bluestacks5newinstances](https://github.com/hansalemaos/bluestacks5newinstances)
+### 4. Install the Python lib [bluestacks5newinstances](https://github.com/hansalemaos/bluestacks5newinstances)
 
 ```py
 # Create new instances from now on only using bluestacks5newinstances
@@ -223,7 +223,7 @@ print(newinstances_and_adbports)
 
 ```
 
-#### 5. Activate ADB in the BlueStacks options and find all su executables
+### 5. Activate ADB in the BlueStacks options and find all su executables
 
 ```sh
 # address might vary
@@ -326,16 +326,16 @@ python
 ### [Download the Magisk module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
 
 
-#### 1. Install LDPlayer version 9 and [VirtualBox](https://www.virtualbox.org/)
+### 1. Install LDPlayer version 9 and [VirtualBox](https://www.virtualbox.org/)
 
 I recommend the  [offline installer](https://www.ldplayer.net/other/version-history-and-release-notes.html)
 Configure each LDPlayer instance as root, local adb connection, writeable system disk
 
-#### 2. Start the main instance and close it
+### 2. Start the main instance and close it
 
-#### 3. Create ONE NEW instance of the same version, start it and close it
+### 3. Create ONE NEW instance of the same version, start it and close it
 
-#### 4. Install the Python lib [ldplayer9newinstances](https://github.com/hansalemaos/ldplayer9newinstances)
+### 4. Install the Python lib [ldplayer9newinstances](https://github.com/hansalemaos/ldplayer9newinstances)
 
 ```py
 
@@ -411,7 +411,7 @@ newfolder = create_independent_instance(
 print(newfolder)
 ```
 
-#### 5. Open an ADB shell and find all su executables
+### 5. Open an ADB shell and find all su executables
 
 ```sh
 # address might vary
@@ -631,9 +631,9 @@ python
 
 
 
-#### 1. Enable Root and writeable system disk on your emulator
+### 1. Enable Root and writeable system disk on your emulator
 
-#### 2. Find all su executables
+### 2. Find all su executables
 
 ```sh
 
@@ -727,11 +727,11 @@ python
 
 
 
-#### 1. Install BlissOS on VMWARE, get the ip of the machine by opening Termux and writing `ifconfig`
+### 1. Install BlissOS on VMWARE, get the ip of the machine by opening Termux and writing `ifconfig`
 
-#### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
+### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
 
-#### 3. Install [Termux](https://github.com/termux/termux-app)
+### 3. Install [Termux](https://github.com/termux/termux-app)
 
 ```sh
 adb.exe -s 192.168.115.136:5555 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
@@ -791,7 +791,7 @@ python
 
 ### [Download the Magisk/KernelSU module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
 
-#### 0. Install BlissOS on VMWARE, start the machine in debug mode and do this:
+### 0. Install BlissOS on VMWARE, start the machine in debug mode and do this:
 
 **Change to the grub folder:**
 
@@ -805,11 +805,11 @@ python
 
 **For now, this is necessary, [it might be changed in a future release of BlissOs](https://github.com/tiann/KernelSU/issues/2113)**
 
-#### 1. get the ip of the machine by opening Termux and writing `ifconfig`
+### 1. get the ip of the machine by opening Termux and writing `ifconfig`
 
-#### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
+### 2. Uninstall the pre-installed Termux, and grant root rights to the ADB shell
 
-#### 3. Install [Termux](https://github.com/termux/termux-app)
+### 3. Install [Termux](https://github.com/termux/termux-app)
 
 ```sh
 adb.exe -s 192.168.115.136:5555 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
