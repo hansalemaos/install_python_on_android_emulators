@@ -853,6 +853,91 @@ python
 ***
 
 
+## Official Android Studio Emulator
+
+[![Video 1](https://img.youtube.com/vi/edHqLJot6pk/0.jpg)](https://www.youtube.com/watch?v=edHqLJot6pk)
+
+### [Download Android Studio](https://developer.android.com/studio)
+
+### [Download Termux](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-app_v0.118.1+github-debug_x86_64.apk)
+
+### [Download Termux Boot - optional](https://github.com/hansalemaos/install_python_on_android_emulators/raw/refs/heads/main/termux-boot-app_v0.8.1+github.debug.apk)
+
+### [Download the Magisk/KernelSU module termuxtoadb](https://github.com/hansalemaos/termuxtoadb/raw/refs/heads/main/termuxtoadb.zip)
+
+### [Download the Magisk/KernelSU module make_writeable](https://github.com/hansalemaos/make_writeable/raw/refs/heads/main/make.writeable.zip)
+
+### 1. Clone rootAVD
+
+`git clone https://gitlab.com/newbit/rootAVD.git`
+
+### 2. Install an emulator - use GooglePlay - Android 11 - API 30 - with PlayStore (this one has root disabled)
+
+### 3. Start the emulator and patch the image
+
+change to your rootAVD folder
+`cd rootAVD`
+
+you can list all patch commands using
+`rootAVD.bat ListAllAVDs`
+
+In my case I had to use
+`rootAVD.bat system-images\android-30\google_apis_playstore\x86_64\ramdisk.img`
+to patch the image
+
+optional, but a good thing to do:
+`cd "%USERPROFILE%\.android\avd`
+edit `\YOUREMULATORFOLDER\config.ini`
+to increase the memory
+
+Reboot, open Magisk, Click "OK", reboot again.
+
+### 4. Install [Termux](https://github.com/termux/termux-app)
+
+```sh
+adb.exe -s emulator-5554 install -g -t "%USERPROFILE%\Downloads\termux-app_v0.118.1+github-debug_x86_64.apk"
+```
+
+### 5. Open and close Termux
+
+### 6. Install [Termux boot](https://github.com/termux/termux-boot) (optional)
+
+```sh
+adb.exe -s emulator-5554 install -g -t "%USERPROFILE%\Downloads\termux-boot-app_v0.8.1+github.debug.apk"
+```
+
+### 7. Open and close Termux boot (optional)
+
+### 8. Open Termux and write in your adb shell:
+
+```sh
+input text 'yes | pkg up;pkg install -y openssh;pkg install -y openssl;pkg install -y python';input keyevent KEYCODE_ENTER
+```
+
+### 9. Push the magisk modules to the sdcard
+
+```sh
+adb.exe -s emulator-5554 push "%USERPROFILE%\Downloads\termuxtoadb.zip" /sdcard
+adb.exe -s emulator-5554 push "%USERPROFILE%\Downloads\make.writeable.zip" /sdcard
+
+```
+### 10. Install the Magisk modules [termuxtoadb](https://github.com/hansalemaos/termuxtoadb) and [make_writeable](https://github.com/hansalemaos/make_writeable)
+
+### 11. Reboot
+
+### 12. Run Python
+
+```sh
+adb.exe -s emulator-5554
+su
+python
+```
+***
+***
+
+
+
+
 
 
 
